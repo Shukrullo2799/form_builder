@@ -1,8 +1,5 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import Auth from '../views/auth/Index.vue'
 import Home from '../views/formList/Index.vue'
-import Field from '../views/field/Index.vue'
-import NotFound from '../views/NotFound.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -13,19 +10,24 @@ const router = createRouter({
       component: Home
     },
     {
-      path: '/field',
+      path: '/field-upsert/:id?',
+      name: 'field-upsert',
+      component: () => import('../views/field/Index.vue')
+    },
+    {
+      path: '/field/:id',
       name: 'field',
-      component: Field
+      component: () => import('../views/field/View.vue')
     },
     {
       path: '/auth',
       name: 'auth',
-      component: Auth
+      component: () => import('../views/auth/Index.vue')
     },
     {
       path: '/:catchAll(.*)',
       name: 'notFound',
-      component: NotFound
+      component: () => import('../views/NotFound.vue')
     }
   ]
 })

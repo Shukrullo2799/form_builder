@@ -1,0 +1,38 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@font-face {
+  font-family: 'Cera PRO Medium';
+  src: url('./font/CeraPro-Medium.eot');
+  src:
+    url('./font/CeraPro-Medium.woff2') format('woff2'),
+    url('./font/CeraPro-Medium.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Cera PRO Regular';
+  src: url('./font/CeraPro-Regular.eot');
+  src:
+    url('./font/CeraPro-Regular.woff2') format('woff2'),
+    url('./font/CeraPro-Regular.woff') format('woff');
+}
+
+.font-500 {
+  font-family: 'Cera PRO Medium';
+  font-weight: 500;
+}
+.font-400 {
+  font-family: 'Cera PRO Regular';
+  font-weight: 400;
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  box-shadow: none;
+}
+body {
+  max-width: 1440px;
+  margin: 0 auto;
+  font-family: 'Cera PRO Regular';
+  font-size: 16px;
+}
