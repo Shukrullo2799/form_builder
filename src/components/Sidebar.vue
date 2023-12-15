@@ -1,7 +1,7 @@
 <template>
   <div
     v-if="isShow"
-    class="md:w-[434px] h-full sm:pt-[80px] xl:pr-[95px] sm:pb-[72px] py-10 xl:pl-[170px] sm:px-16 px-4 flex flex-col bg-white rounded-r-lg md:static fixed left-0 top-0 shadow-2xl md:sha z-20"
+    class="md:w-[434px] h-full sm:pt-[80px] xl:pr-[95px] sm:pb-[72px] py-10 xl:pl-[170px] sm:px-16 px-4 flex flex-col bg-white rounded-r-lg md:static fixed left-0 top-0 shadow-2xl md:shadow-none z-20"
     :class="isShow ? 'w-[280px]' : 'w-0'"
   >
     <p class="absolute top-5 right-5 text-2xl md:hidden" @click="isShow = false">x</p>
